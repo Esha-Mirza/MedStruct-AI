@@ -153,3 +153,10 @@ This project is licensed under the MIT License.
 Built by Esha Mirza — [GitHub](https://github.com/Esha-Mirza) · [LinkedIn](https://linkedin.com/in/esha-mirza1623)
 
 </div>
+
+---
+
+<p align="center">
+  <strong>MedStruct-AI</strong><br>
+  Note to Chart
+</p>
