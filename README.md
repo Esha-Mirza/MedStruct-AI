@@ -20,9 +20,9 @@ Note to Chart takes a doctor's free-text clinical note and extracts symptoms, di
 
 <div align="center">
 
-<!-- Replace with your hosted GitHub screenshot links, for example: -->
-<!-- ![Application view](https://github.com/user-attachments/assets/your-image-id) -->
-<!-- ![Extraction result](https://github.com/user-attachments/assets/your-image-id) -->
+<img width="1252" height="837" alt="Image" src="https://github.com/user-attachments/assets/8d610ee8-656b-4e23-a840-16db8a23a7a4" />
+
+<img width="1407" height="835" alt="Image" src="https://github.com/user-attachments/assets/0b30c339-7845-4a4b-9d48-84758f852880" />
 
 </div>
 
