@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Note to Chart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div class="sheet">
+
+    <header class="masthead">
+      <div class="masthead-mark">&#9877;</div>
+      <div class="masthead-text">
+        <h1>Note to Chart</h1>
+        <p>Paste a clinical note. Get it back as a structured chart entry.</p>
+      </div>
+    </header>
+
+    <main class="intake">
+
+      <section class="field-panel">
+        <label for="note" class="field-label">Clinical note</label>
+        <textarea
+          id="note"
+          placeholder="Patient complains of fatigue and joint pain. Diagnosed with rheumatoid arthritis. Prescribed methotrexate. Follow-up in 4 weeks."
+        ></textarea>
+
+        <div class="field-row">
+          <button id="sample-btn" class="link-btn" type="button">Use a sample note</button>
+          <button id="extract-btn" class="primary-btn" type="button">
+            <span class="btn-label">Structure this note</span>
+          </button>
+        </div>
+
+        <p id="error-msg" class="error-msg" hidden></p>
+      </section>
+
+      <section id="chart" class="chart" hidden>
+        <div class="chart-heading">
+          <h2>Structured chart entry</h2>
+          <button id="download-btn" class="link-btn" type="button">Download as JSON</button>
+        </div>
+
+        <dl class="chart-rows">
+          <div class="chart-row">
+            <dt>Symptoms</dt>
+            <dd id="out-symptoms"></dd>
+          </div>
+          <div class="chart-row">
+            <dt>Diagnosis</dt>
+            <dd id="out-diagnosis"></dd>
+          </div>
+          <div class="chart-row">
+            <dt>Medications</dt>
+            <dd id="out-medications"></dd>
+          </div>
+          <div class="chart-row">
+            <dt>Follow-up</dt>
+            <dd id="out-followup"></dd>
+          </div>
+        </dl>
+      </section>
+
+    </main>
+
+    <footer class="colophon">
+      <span>Extraction model runs locally via Ollama</span>
+    </footer>
+
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
